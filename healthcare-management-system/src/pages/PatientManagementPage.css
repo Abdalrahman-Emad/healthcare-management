@@ -1,0 +1,103 @@
+.patient-management-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: #f4f7f9;
+    min-height: 100vh;
+}
+
+.patient-management-page h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #009A9A;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.patient-management-page .patient-management {
+    width: 100%;
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.patient-management-page .form-control {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.patient-management-page .btn-primary {
+    background-color: #009A9A;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.patient-management-page .btn-primary:hover {
+    background-color: #006B6B !important;
+}
+
+.patient-list {
+    margin-top: 20px;
+}
+
+.patient-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.patient-list th, .patient-list td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.patient-list th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    /* color: #583594; */
+    text-align: center;
+    
+}
+
+.patient-list tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.patient-list tr:hover {
+    background-color: #e8e8e8;
+}
+
+.btn-icon {
+    background: none;
+    border: none;
+    /* color: #dc3545; */
+    cursor: pointer;
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+    .patient-management-page {
+        padding: 20px;
+    }
+
+    .patient-management-page h2 {
+        font-size: 2rem;
+    }
+
+    .patient-management-page .patient-management {
+        padding: 15px;
+    }
+}

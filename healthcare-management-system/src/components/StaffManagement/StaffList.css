@@ -1,0 +1,40 @@
+/* StaffList.css */
+.staff-list {
+    margin-top: 20px;
+}
+
+.staff-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.staff-list th, .staff-list td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.staff-list th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.staff-list tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.staff-list tr:hover {
+    background-color: #f1f1f1;
+}
+
+.btn-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+}
+

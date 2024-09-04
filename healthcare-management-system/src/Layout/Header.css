@@ -1,0 +1,210 @@
+.header {
+    background-color: #009A9A;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    width: 100%;
+    z-index: 1000;
+    padding: 0.5rem 0; 
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    width: 100px;
+    height: 4rem; 
+    object-fit: cover;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-left: 1.5rem;
+    position: relative;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0; 
+    transition: color 0.3s ease; 
+}
+
+.nav-item a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%; 
+    background-color: #ffffff;
+    transition: width 0.3s ease, left 0.3s ease; 
+}
+
+.nav-item a:hover {
+    color: #e0e0e0; 
+}
+
+.nav-item a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+nav ul li a {
+    text-decoration: none !important;
+}
+
+.user-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.user-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+    z-index: 1000;
+    color: #009A9A;
+}
+
+.user-menu p {
+    margin: 0;
+}
+
+.user-menu button {
+    background: #009A9A;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.user-menu button:hover {
+    background: #00C8C8;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem; /* Add padding for better click area */
+    }
+
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+        width: 30px;
+        height: 3px;
+        background-color: #ffffff;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .hamburger {
+        position: relative;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+        content: '';
+        position: absolute;
+        left: 0;
+    }
+
+    .hamburger::before {
+        top: -8px;
+    }
+
+    .hamburger::after {
+        top: 8px;
+    }
+
+    .main-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #009A9A;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.5s ease-in-out; /* Slightly faster animation */
+    }
+
+    .main-nav.is-open {
+        transform: scaleY(1);
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-item {
+        margin: 0.75rem 0; /* Increase margin for better spacing */
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-item a {
+        display: block;
+        width: 100%; /* Make link full-width */
+        padding: 0.75rem 0; /* Increase padding for better touch target */
+    }
+
+    /* Improved hover effect for mobile */
+    .nav-item a:hover::after {
+        width: 50%;
+        left: 25%;
+    }
+}
+
+/* Ensure smooth animation on menu toggle */
+.menu-toggle .hamburger.is-active::before {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle .hamburger.is-active::after {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.menu-toggle .hamburger.is-active {
+    background-color: transparent;
+}

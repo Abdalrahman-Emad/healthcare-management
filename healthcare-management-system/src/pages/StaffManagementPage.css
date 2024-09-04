@@ -1,0 +1,64 @@
+.staff-management-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: #f4f7f9; /* Light background color */
+  min-height: 100vh;
+}
+
+.staff-management-page h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #009a9a; /* Updated to match the theme */
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.staff-management-page .staff-management {
+  width: 100%;
+  max-width: 900px;
+  background-color: #fff; /* Card background color */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.staff-management-page .staff-management .form-control {
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.staff-management-page .staff-management .btn-primary {
+  background-color: #009a9a; /* Updated to match the theme */
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.staff-management-page .staff-management .btn-primary:hover {
+  background-color: #006b6b; /* Darker shade for hover */
+}
+
+.staff-management-page .staff-list {
+  margin-top: 20px;
+}
+
+.staff-management-page .staff-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.staff-management-page .staff-list li {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
